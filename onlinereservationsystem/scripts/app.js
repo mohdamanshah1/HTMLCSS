@@ -1,6 +1,5 @@
 const users = {
     aman: "aman@123",
-    john: "john@456",
 };
 
 const mon = document.getElementById('curmon')
@@ -9,6 +8,7 @@ let bookings = JSON.parse(localStorage.getItem("bookings")) || {};
 
 let currentMonth = new Date().getMonth();
 let currentYear = new Date().getFullYear();
+mon.innerText = `Calander - ${getMonthName(0)}, ${currentYear}`
 
 const calendarElements = {
     calendarView: document.getElementById('calendar-view'),
@@ -22,7 +22,10 @@ const calendarElements = {
     calendarNav: document.getElementById('calendar-nav')
 };
 
-function login() {
+document.getElementById('form').addEventListener('submit', login);
+
+function login(e) {
+    e.preventDefault();
     const username = calendarElements.usernameField.value;
     const password = calendarElements.passwordField.value;
 
@@ -59,7 +62,7 @@ function createNavigationButtons() {
 
     const nextButton = document.createElement('button');
     nextButton.textContent = 'Next Month';
-    nextButton.classList.add('btn', 'btn-primary','mx-1');
+    nextButton.classList.add('btn', 'btn-primary', 'mx-1');
     nextButton.addEventListener('click', () => changeMonth(1));
 
     calendarElements.calendarNav.appendChild(prevButton);
@@ -111,6 +114,7 @@ function changeMonth(offset) {
         currentYear--;
     }
 
+    mon.innerText = `Calander - ${getMonthName(currentMonth)}, ${currentYear}`
     renderCalendar();
 }
 
@@ -153,10 +157,24 @@ function bookSlot(date, slot) {
 
 function showBookingNotification(date, slot) {
     const notificationHTML = `
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="alert alert-warning alert-dismissible fade show fixed-top" role="alert">
             <strong>Success!</strong> You have successfully booked the ${slot} slot on ${date}.
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
     `;
     calendarElements.alertContainer.innerHTML = notificationHTML;
+    setTimeout(e => calendarElements.alertContainer.innerHTML = '', 1000);
+}
+
+
+function getMonthName(index) {
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    // const currentDate = new Date();
+    // const currentMonth = currentDate.getMonth(); // 0-based month
+    // const adjustedMonth = (currentMonth + offset + 12) % 12; // Ensure it stays within range
+    return monthNames[index];
 }
