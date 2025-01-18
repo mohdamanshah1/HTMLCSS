@@ -1,0 +1,122 @@
+html {
+    font-family: sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    align-items: center;
+    background-color: bisque;
+}
+
+header p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+article {
+    padding-inline: 1rem;
+}
+
+.question p {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.options ul {
+    list-style: none;
+    padding: 0;
+}
+
+.options li {
+    background-color: lightcyan;
+    border: 1px solid skyblue;
+    border-radius: .25em;
+    padding: 1em;
+    margin-bottom: .25em;
+    cursor: pointer;
+}
+
+.options li:hover {
+    background-color: azure;
+}
+
+nav {
+    display: flex;
+    column-gap: 1em;
+    align-items: center;
+}
+
+.nextQuesButton button {
+    padding: 1em 2em;
+    background-color: aquamarine;
+    border: 0;
+    border-radius: .25em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.nextQuesButton button:hover {
+    background-color: greenyellow;
+}
+
+.options li.correct {
+    background-color: lightgreen;
+    border-color: green;
+}
+
+.options li.wrong {
+    background-color: lightcoral;
+    border-color: red;
+}
+
+
+
+
+
+.btn {
+    padding: .5em 1em;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.modalWrapper {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.modalBackDrop {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, .3);
+    z-index: 100;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 150;
+    transform: translate(-50%, -50%);
+    border: 2px solid purple;
+    padding: 2em 4em;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 white;
+}
+
+.modalYes {
+    background-color: goldenrod;
+}
+
+.modalYes:hover {
+    background-color: gold;
+}
+
+.visible {
+    display: block;
+}

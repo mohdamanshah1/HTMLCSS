@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+main {
+    background-color: rgb(215, 121, 121);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hourMarkers {
+    fill: transparent;
+    stroke: #f0f0c9;
+    stroke-width: 7;
+    stroke-dasharray: 0.2, 4.8;
+    stroke-dashoffset: 0.1;
+}
+
+.minuteMarkers {
+    fill: transparent;
+    stroke: #0f0e0e;
+    stroke-width: 7;
+    stroke-dasharray: 0.2, 0.8;
+    stroke-dashoffset: 0.1;
+}
+
+svg {
+    transform: scale(2);
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: .1em;
+}
+
+.hand {
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.hand.minute {
+    stroke: red;
+}
+
+.hand.hour {
+    stroke: orange;
+}
+
+.hand.second {
+    stroke: yellow;
+}

@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #details-panel {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    background-color: rgba(50, 50, 50, 0.9);
+    color: #FFD700;
+    padding: 15px;
+    border: 2px solid #4CAF50;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+    display: none;
+    box-shadow: 0 0 10px #FF5733;
+  }
+  

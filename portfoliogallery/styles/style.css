@@ -1,0 +1,162 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --navbar-height: 3em;
+    --footer-height: 3em
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    all: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: #eee;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: right;
+    margin-inline: 2rem;
+    min-height: var(--navbar-height);
+    align-items: center;
+    font-variant: small-caps;
+}
+
+.navList {
+    display: flex;
+
+    li {
+        margin-inline: .875em;
+        font-size: 1.15rem;
+        cursor: pointer;
+    }
+}
+
+.navList li a {
+    color: black;
+    transform: all 200ms linear;
+}
+
+.navList li:hover a {
+    color: grey;
+}
+
+.navList li.active {
+    border-bottom: 2px solid black;
+}
+
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    gap: 0.5em;
+    padding-block: 1em var(--navbar-height);
+    padding-inline: 1em;
+}
+
+.imageWrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.imageWrapper>img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+}
+
+.imageWrapper>.imageBgText {
+    position: absolute;
+    inset: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.imageWrapper>img,
+.imageWrapper>.imageBgText {
+    transition: all 300ms ease-in-out;
+}
+
+.imageWrapper:hover>.blur {
+    filter: blur(5px);
+}
+
+
+.imageWrapper>.slideInLeft {
+    transform: translateX(-100%);
+}
+
+.imageWrapper:hover>.slideInLeft {
+    transform: translateX(0);
+}
+
+
+.footer {
+    background-color: #eee;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    min-height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 39rem) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 18rem) {
+    html {
+        font-size: .65rem;
+    }
+
+    .navList {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 0;
+        gap: 10px;
+
+    }
+
+    header {
+        padding-block: 1em;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}

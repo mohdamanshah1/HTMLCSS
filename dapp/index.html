@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <main>
+        <h1>Logs for latest block headers on the Ethereum blockchain.</h1>
+        <div class="container">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>baseFeePerGas</th>
+                        <th>blobGasUsed</th>
+                        <th>difficulty</th>
+                        <th>excessBlobGas</th>
+                        <th>extraData</th>
+                        <th>gasLimit</th>
+                        <th>gasUsed</th>
+                        <th>hash</th>
+                        <th>logsBloom</th>
+                        <th>miner</th>
+                        <th>mixHash</th>
+                        <th>nonce</th>
+                        <th>number</th>
+                        <th>parentBeaconBlockRoot</th>
+                        <th>parentHash</th>
+                        <th>receiptsRoot</th>
+                        <th>sha3Uncles</th>
+                        <th>stateRoot</th>
+                        <th>timestamp</th>
+                        <th>transactionsRoot</th>
+                        <th>withdrawalsRoot</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+</body>
+<script src="./scripts/index.js"></script>
+
+</html>

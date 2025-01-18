@@ -1,0 +1,43 @@
+img {
+    width: 90%;
+    display: block;
+    margin-inline: auto;
+}
+
+h1 {
+    font-size: 5rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+.landingText p {
+    font-size: 1.75rem;
+}
+
+.divider {
+    margin-block: 1em;
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list li {
+    margin-block: 3em;
+}
+
+.testimonials img {
+    width: 40%;
+    aspect-ratio: 1/1;
+    height: auto;
+    border-radius: 50%;
+}

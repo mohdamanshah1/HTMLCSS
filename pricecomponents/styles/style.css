@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --accent-color: #641bff;
+    --heading-font-family: "Poppins", sans-serif;
+    --body-font-family: "Lato", sans-serif;
+}
+
+.prices-wrapper {
+    width: 100%;
+    max-width: 72em;
+    margin-inline: auto;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.price-column {
+    font-family: var(--body-font-family);
+    border-radius: 5px;
+    padding: 2rem;
+    background-color: #f8f9fb;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px 2px rgb(215, 214, 214);
+    height: max-content;
+}
+
+.price-column.most-popular {
+    background-color: var(--accent-color);
+    color: white;
+    padding-block: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.price-column:not(.most-popular) {
+    transform: scaleY(90%)
+}
+
+.price-column.most-popular::before {
+    content: "MOST POPULAR";
+    font-weight: bolder;
+    top: 0.5em;
+    width: max-content;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.price-column.most-popular .btn {
+    background-color: white;
+    color: var(--accent-color);
+    box-shadow: 0 2px 4px 2px var(--accent-color);
+}
+
+.price-header {
+    padding: 1.5rem 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.price-rate {
+    display: flex;
+    font-weight: bolder;
+}
+
+.price-rate .price {
+    font-family: var(--heading-font-family);
+    font-size: 3.5rem;
+}
+
+.per-month {
+    line-height: 4.5rem;
+}
+
+.currency {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.divider {
+    height: 1px;
+    background-color: rgb(226, 225, 225);
+}
+
+.type {
+    margin-top: 1em;
+    font-weight: bold;
+}
+
+.features-list {
+    padding: 2em;
+}
+
+.feature {
+    font-size: 1.25rem;
+    margin-top: .5em;
+}
+
+.feature-disabled {
+    color: gray;
+    text-decoration: line-through;
+}
+
+.btn-wrapper {
+    padding-inline: 1rem;
+}
+
+.btn {
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+    background-color: var(--accent-color);
+    cursor: pointer;
+}
+
+.btn-wrapper:hover>.btn {
+    transform: scale(1.1);
+}

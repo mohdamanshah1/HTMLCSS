@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Interactive forms</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Welcome to website
+        </h1>
+    </header>
+    <main>
+        <div class="formWrapper">
+            <form id="form" method="post">
+                <div id="error"></div>
+                <div class="input">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" id="username" required aria-required="true" />
+                </div>
+                <div class="input">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required aria-required="true" />
+                </div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="./scripts/scripts.js" type="module"></script>
+
+</html>

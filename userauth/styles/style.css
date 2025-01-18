@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: azure;
+}
+
+.loginContainer {
+    background: white;
+    padding: 1.25em;
+    border-radius: .5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 22em;
+}
+
+.loginContainer h2 {
+    margin-bottom: 1.25em;
+}
+
+.formGroup {
+    margin-bottom: 1.125em;
+}
+
+label {
+    display: block;
+    margin-bottom: .25em;
+    font-weight: bold;
+}
+
+input {
+    padding: .5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: .875em;
+    background: blue;
+    border: none;
+    color: white;
+    border-radius: .5em;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}

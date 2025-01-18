@@ -1,0 +1,69 @@
+{
+    "name": "Is Temperature > 30°C?",
+    "children": [
+        {
+            "name": "Yes",
+            "children": [
+                {
+                    "name": "Is Humidity > 70%?",
+                    "children": [
+                        {
+                            "name": "Yes",
+                            "children": [
+                                {
+                                    "name": "Wear Light Clothes"
+                                },
+                                {
+                                    "name": "Wear Heavy Clothes"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "No",
+                            "children": [
+                                {
+                                    "name": "Wear Light Clothes"
+                                },
+                                {
+                                    "name": "Wear Medium Clothes"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "No",
+            "children": [
+                {
+                    "name": "Is Temperature < 15°C?",
+                    "children": [
+                        {
+                            "name": "Yes",
+                            "children": [
+                                {
+                                    "name": "Wear Heavy Clothes"
+                                },
+                                {
+                                    "name": "Wear Medium Clothes"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "No",
+                            "children": [
+                                {
+                                    "name": "Wear Medium Clothes"
+                                },
+                                {
+                                    "name": "Wear Light Clothes"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

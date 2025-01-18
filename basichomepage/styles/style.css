@@ -1,0 +1,208 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+:root {
+    --navbar-height: 5.5em;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    all: unset;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    background-color: white;
+    position: sticky;
+    width: 100vw;
+    top: 0;
+    z-index: 100;
+}
+
+.divider {
+    height: 5em;
+    background-color: #333;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 2rem;
+    height: var(--navbar-height);
+    align-items: center;
+    color: gray;
+    font-variant: small-caps;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.navList {
+    display: flex;
+
+    li {
+        margin-inline: .875em;
+        font-size: 1.15rem;
+        ;
+
+        a {
+            transform: color 200ms linear;
+        }
+    }
+}
+
+.navList li:hover {
+    a {
+
+        color: black;
+    }
+}
+
+.landing {
+    height: calc(100vh - var(--navbar-height));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('../assets//images/bg1.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.landing>* {
+    margin-top: 1.2rem;
+    color: white;
+}
+
+h1 {
+    color: black;
+    width: 15ch;
+    text-align: center;
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: lighter;
+    mix-blend-mode: difference;
+}
+
+.buttons {
+    display: flex;
+}
+
+.btn {
+    padding: .75em 1.25em;
+    margin-left: 1em;
+    font-size: 1.25rem;
+    border: none;
+    font-weight: bolder;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+
+.btnSecondary {
+    background-color: rgb(2, 166, 2);
+    color: white;
+    transition: all 200ms linear;
+    border-radius: 2px;
+}
+
+.btnSecondary:hover {
+    background-color: green;
+}
+
+.btnPrimaryOutline {
+    background-color: transparent;
+    color: white;
+    transition: all 200ms linear;
+    box-shadow: 0 0 0 2px white inset;
+}
+
+.btnPrimaryOutline:hover {
+    background-color: white;
+    color: black;
+}
+
+.section {
+    padding-top: var(--navbar-height);
+    display: flex;
+    align-items: center;
+}
+
+.section>div {
+    flex-basis: 50%;
+}
+
+.sectionImage img {
+    width: 100%;
+    height: auto;
+}
+
+.sectionText {
+    text-align: center;
+}
+
+.sectionText>h2,
+.sectionText>p,
+.sectionText>div {
+    margin-bottom: 1.2em;
+}
+
+.sectionText>p {
+    max-width: 50ch;
+    margin-inline: auto;
+}
+
+.sectionText>h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    min-height: 9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 69em) {
+    html {
+        font-size: .75em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: left;
+        height: fit-content;
+        padding-block: 1rem;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+    }
+
+    .landing {
+        margin-top: var(--navbar-height);
+        height: fit-content;
+        padding-block: 2rem;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,82 @@
+#map {
+  height: 100%;
+}
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.currentLocationButton {
+  background-color: rgb(157, 157, 248);
+  border-radius: 50%;
+  border: 0;
+  width: 3em;
+  height: 3em;
+  position: fixed;
+  left: 2em !important;
+  bottom: 2em !important;
+  top: unset !important;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .25em solid black;
+}
+
+.currentLocationButton::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: '';
+  display: block;
+  height: .25em;
+  background-color: black;
+
+}
+
+.currentLocationButton::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: .25em;
+  content: '';
+  display: block;
+  background-color: black;
+}
+
+
+.searchFeature {
+  position: fixed;
+  top: 20px;
+  background-color: white;
+  padding: .5em;
+}
+
+.searchFeature input,
+.searchFeature button {
+  padding: 1em;
+}
+
+#cityList {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  max-width: 20em;
+  gap: 1em;
+  list-style: none;
+  padding-left: 0;
+}
+
+#cityList li {
+  text-wrap-mode: wrap;
+  text-wrap-style: pretty;
+  cursor: pointer;
+  padding: .25em;
+}
+
+#cityList li:hover {
+  background-color: rgba(0, 0, 0, 0.25);
+}

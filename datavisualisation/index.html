@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Data Visualisation</title>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <form id="inputForm">
+                <select id="monthSelect">
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                </select>
+                <input type="number" id="valueInput" placeholder="Enter Sales Value" required
+                    style="margin-right: 10px;" />
+                <button type="submit">Add Data</button>
+            </form>
+
+            <canvas id="salesChart" width="800" height="400"></canvas>
+        </main>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="./scripts/index.js"></script>
+
+</html>

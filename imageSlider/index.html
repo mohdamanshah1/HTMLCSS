@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <title>Image Slider</title>
+</head>
+
+<body>
+  <nav>
+    <button id="PrevButton" class="prev" onclick="changeSlide(-1)" title="prevImageButton">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor"
+        class="bi bi-chevron-compact-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223" />
+      </svg>
+    </button>
+    <button id="NextButton" class="next" onclick="changeSlide(1)" title="nextImageButton">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor"
+        class="bi bi-chevron-compact-right" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671" />
+      </svg>
+    </button>
+  </nav>
+
+  <main>
+    <section>
+      <div class="imgWrapper">
+        <img id="sliderImage" src="https://picsum.photos/100?random=1" alt="not found" />
+      </div>
+    </section>
+  </main>
+  <script src="./scripts/script.js"></script>
+</body>
+
+</html>

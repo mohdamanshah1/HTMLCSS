@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#tree-container {
+  border: 1px solid #ccc;
+}
+
+.node {
+  stroke: #555;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+
+.node:hover {
+  fill: lightblue;
+}
+
+.label {
+  font: 14px sans-serif;
+  text-anchor: middle;
+  pointer-events: none;
+  fill: #333;
+  font-weight: lighter;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}

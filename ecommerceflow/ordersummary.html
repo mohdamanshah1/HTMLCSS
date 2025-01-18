@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <form action="./confirmation.html">
+                <h2>Order Summary</h2>
+                <p>Address: <span id="summary-address"></span></p>
+                <p>Card: <span id="summary-card"></span></p>
+                <p>Cardholder Name: <span id="card-holder"></span></p>
+                <div class="buttons">
+                    <button class="button" type="submit">Confirm Order</button>
+                    <a href="./billing.html" class="button">Go back</a>
+                </div>
+            </form>
+        </div>
+        <script>
+            const street = localStorage.getItem('street');
+            const city = localStorage.getItem('city');
+            const state = localStorage.getItem('state');
+            const cardNumber = localStorage.getItem('cardnumber');
+            const cardHolderName = localStorage.getItem('holdername');
+
+            const fullAddress = `${street}, ${city}, ${state}`;
+
+            document.getElementById('summary-address').textContent = fullAddress || 'Address not provided';
+            document.getElementById('summary-card').textContent = `**** **** **** ${cardNumber.slice(-4)}`;
+            document.getElementById('card-holder').textContent = cardHolderName;
+        </script>
+
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Video player</title>
+</head>
+
+<body>
+    <main>
+        <section class="videoPlayer">
+            <video src="./video/demo.mp4"> </video>
+            <div class="controls">
+                <button class="pause">
+                    <span>⏸️</span>
+                    <span>▶️</span>
+                </button>
+                <input id="volume" type="range" class="volumeSlider" min="0" value="0.5" max="1" step="0.1">
+                <input id="progress" type="range" class="progressBar" min="0" value="0" max="100">
+            </div>
+        </section>
+    </main>
+</body>
+<script type="module" src="./scripts/scripts.js"></script>
+
+</html>

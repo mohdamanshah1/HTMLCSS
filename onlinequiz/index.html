@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>OnlineQuiz</title>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Quiz Application
+        </h1>
+        <div class="score">
+            <p>
+                Score 0
+            </p>
+        </div>
+    </header>
+    <main>
+
+        <div class="modalWrapper" role="alert">
+            <div class="modalBackDrop"></div>
+            <div class="modal" role="alertdialog">
+                <h1>Congratulations!</h1>
+                <p></p>
+                <p>Restart quiz ?</p>
+                <button class="btn modalYes">Yes</button>
+            </div>
+        </div>
+
+        <article>
+            <section class="question">
+                <p></p>
+            </section>
+            <section class="options">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <nav class="nav" role="navigation">
+                <div class="quesNumber">
+                    1 of 10 Questions
+                </div>
+                <div class="nextQuesButton">
+                    <button type="button">Next</button>
+                </div>
+            </nav>
+        </article>
+    </main>
+</body>
+<script type="module" src="./scripts/scripts.js"></script>
+
+</html>

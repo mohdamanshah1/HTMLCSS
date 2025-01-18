@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.weatherForecastWidget {
+    background-color: rgba(36, 86, 124, 1);
+}
+
+.currentWeather {
+    color: white;
+    padding: 1em;
+}
+
+.currentWeather p {
+    margin-block: .5em;
+}
+
+h2 {
+    margin-bottom: 1em;
+}

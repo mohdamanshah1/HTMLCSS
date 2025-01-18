@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h2>Billing Information</h2>
+            <form action="./ordersummary.html">
+                <input required type="text" placeholder="Enter card holder name" id="holdername">
+                <input required minlength="12" maxlength="12" type="number" placeholder="Enter your card number"
+                    id="cardnumber">
+                <input required minlength="3" maxlength="3" type="number" placeholder="Enter your cvv" id="cvv">
+                <input required type="date" placeholder="Enter expiry date" id="expirydate">
+                <div class="buttons">
+                    <button class="button" type="submit">Next: Review Order</button>
+                    <a href="./shipping.html" class="button">Go back</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const holderName = document.getElementById('holdername').value;
+            const cardNumber = document.getElementById('cardnumber').value;
+            const cvv = document.getElementById('cvv').value;
+            const expiryDate = document.getElementById('expirydate').value;
+
+            localStorage.setItem('holdername', holderName);
+            localStorage.setItem('cardnumber', cardNumber);
+            localStorage.setItem('cvv', cvv);
+            localStorage.setItem('expirydate', expiryDate);
+
+            window.location.href = './ordersummary.html';
+        });
+    </script>
+</body>
+
+</html>

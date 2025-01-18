@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css">
+    </style>
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h1 class="title">Welcome</h1>
+
+            <form action="/index.html" class="form">
+                <div class="formWrapper">
+                    <div class="inputGroup error">
+                        <label for="Name">Password</label>
+                        <input required type="text" maxlength="40" minlength="2" name="Name" id="Name"
+                            placeholder="Enter your name" />
+
+                    </div>
+                    <div class="inputGroup success">
+                        <label for="Email">Email</label>
+                        <input required type="email" name="Email" placeholder="Enter your email" id="Email" />
+                    </div>
+
+                    <div class="inputGroup">
+                        <div>
+                            <label for="MessageBox">Message</label>
+                        </div>
+                        <textarea required minlength="10" maxlength="100" id="MessageBox" title="message">
+
+                        </textarea>
+                    </div>
+                    <button type="submit" class="loginButton">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

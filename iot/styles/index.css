@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.dashboard {
+    padding: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #333;
+    font-size: 1.2em;
+}
+
+p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.status.good {
+    color: green;
+}
+
+.status.warning {
+    color: orange;
+}
+
+.status.danger {
+    color: red;
+}
+
+/* Button styles for sensor state */
+.sensor-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button colors for states */
+.sensor-btn.on {
+    background-color: green;
+    /* On state */
+}
+
+.sensor-btn.off {
+    background-color: red;
+    /* Off state */
+}
+
+.sensor-btn:hover {
+    opacity: 0.8;
+}
+
+/* Sensor status indicator */
+.indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: green;
+    /* Default: on */
+}
+
+.indicator.off {
+    background-color: red;
+    /* Off: red */
+}

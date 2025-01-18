@@ -1,0 +1,71 @@
+:root {
+    --border-radius: .5em;
+    --border-width: 2px;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+
+#taskList {
+    padding: 0;
+    list-style: none;
+}
+
+.task {
+    display: flex;
+    margin-bottom: 1em;
+    height: max-content;
+}
+
+.task p {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    outline: var(--border-width) solid skyblue;
+    border-radius: var(--border-radius);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    height: auto;
+}
+
+.task button {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    border: none;
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+    color: white;
+    height: auto;
+}
+
+.task button.completed:focus {
+    outline: var(--border-width) solid darkgreen;
+}
+
+.task p {
+    margin: 0;
+}
+
+.completed {
+    outline: var(--border-width) solid darkgreen;
+    background-color: lightgreen;
+}
+
+.pending {
+    outline: var(--border-width) solid crimson;
+    background-color: lightcoral;
+}

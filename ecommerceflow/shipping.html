@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <h2>Shipping Information</h2>
+            <form action="./billing.html">
+                <input required type="text" placeholder="Street" id="street">
+
+                <input required type="text" placeholder="City" id="city">
+
+                <input required type="text" placeholder="State" id="state">
+                <div class="buttons">
+                    <button class="button" type="submit">Next: Billing Information</button>
+                    <a href="./index.html" class="button">Go back</a>
+                </div>
+
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const street = document.getElementById('street').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+
+            localStorage.setItem('street', street);
+            localStorage.setItem('city', city);
+            localStorage.setItem('state', state);
+
+            window.location.href = './billing.html';
+        });
+    </script>
+</body>
+
+</html>

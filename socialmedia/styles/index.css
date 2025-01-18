@@ -1,0 +1,195 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0;
+    margin-inline: auto;
+    font-family: sans-serif;
+}
+
+/*#region Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+hr {
+    margin-block: 1em;
+}
+
+/* button in header to create new post */
+.addPost {
+    background: skyblue;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: 0;
+    border-radius: .35em;
+    outline: 2px solid blue;
+    cursor: pointer;
+}
+
+.addPost:focus {
+    outline: 2px solid blue;
+}
+
+.addPost:hover {
+    background-color: lightblue;
+}
+
+
+/*#endregion */
+
+
+/*#region Posts  */
+
+
+
+.post {
+    position: relative;
+    width: 100%;
+    max-width: 30em;
+    margin-inline: auto;
+}
+
+.postImage {
+    background-color: white;
+}
+
+.imgWrapper img {
+    width: 100%;
+}
+
+.posterData {
+    display: flex;
+    gap: 1em;
+    margin-bottom: .125em;
+    align-items: center;
+}
+
+.profileImage img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+.posterNameAndDate p {
+    margin-bottom: .25em;
+}
+
+.description {
+    margin-bottom: .5em;
+}
+
+
+
+
+.interactionButton {
+    background-color: white;
+    border: none;
+}
+
+.interactionButton svg {
+    height: 2em;
+    width: 2em;
+}
+
+.interaction {
+    display: flex;
+    justify-content: space-between;
+    margin-block: .5em;
+}
+
+
+
+
+/*#endregion  */
+
+
+/*#region Comments  */
+
+.postComments {
+    background-color: #ddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -10;
+}
+
+.postComments::-webkit-scrollbar {
+    display: none;
+}
+
+.commentList {
+    height: 100%;
+    padding: 0;
+    padding-left: .5em;
+    list-style: none;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.commentList::-webkit-scrollbar {
+    display: none;
+}
+
+.commentForm {
+    position: sticky;
+    top: 0;
+    display: flex;
+    border: 1px solid black;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+
+.commentInput {
+    flex: 1;
+    padding: 1em;
+    border: none;
+    outline: none;
+}
+
+.postCommentButton {
+    background-color: white;
+    border: none;
+    padding: 1em;
+    border-left: 1px solid gray;
+}
+
+.comment {
+    font-size: 1.25rem;
+    margin-block: 1em;
+    border-bottom: 1px solid gray;
+}
+
+.shiftLeft {
+    transform: translateX(-52%);
+}
+
+.shiftRight {
+    transform: translateX(52%);
+    z-index: 10;
+}
+
+.postImage,
+.postComments {
+    transition: transform 200ms linear;
+}
+
+.liked svg{
+    fill: red;
+}
+
+/*#endregion  */

@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: black;
+  overflow: hidden;
+}
+
+#toolbar {
+  margin: 1em;
+}
+
+canvas {
+  margin-inline: auto;
+  border: 1px solid #ccc;
+  background: #fff;
+  display: block;
+  cursor: crosshair;
+}

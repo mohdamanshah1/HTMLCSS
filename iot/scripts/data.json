@@ -1,0 +1,18 @@
+{
+    "Temperature": {
+        "value": "25°C",
+        "status": "Normal"
+    },
+    "Humidity": {
+        "value": "60%",
+        "status": "Optimal"
+    },
+    "LightIntensity": {
+        "value": "300 lux",
+        "status": "High"
+    },
+    "AirQuality": {
+        "value": "Good",
+        "status": "Healthy"
+    }
+}

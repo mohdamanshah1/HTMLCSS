@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav>button {
+  position: fixed;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 8em;
+  height: 8em;
+  transition: color 200ms linear;
+}
+
+nav>button:hover {
+  color: gray;
+}
+
+.imgWrapper {
+  height: 100vh;
+}
+
+.prev {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next {
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
